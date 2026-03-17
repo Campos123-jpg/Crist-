@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #253737;
+    /* background-color removido daqui */
+}
 
+body {
+    background-color: #253737; /* aplica o fundo da página */
 }
 .header {
     height: 140px;
@@ -37,6 +40,7 @@
     color: #ffffff; /* muda só a cor */
     background: transparent; 
     font-size: 22px;
+    font-style: italic;
 
 }
 .header img {
@@ -78,5 +82,65 @@
 }
 
 .slide.active {
-  opacity: 2;
+  opacity: 1; /* corrigido de 2 para 1 */
+  z-index: 1; /* garante que a slide ativa fique acima das outras */
+}
+/*Partes*/ 
+.Text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #96775E;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
+.Oversized_Text h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #96775E;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
+.Oversized {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* use nowrap se não quiser quebra em telas pequenas */
+    height: 550px;
+    width:80%;
+    margin: 5px auto; /* centraliza horizontalmente */
+    text-align: center;
+}
+
+/* Evita que o header cubra o alvo do hash ao navegar */
+section { scroll-margin-top: 140px; }
+
+/* substitui seletores de id duplicados por classe única */
+.Parte {
+    flex: 0 0 30%; /* largura fixa ~30% cada (ajuste conforme desejar) */
+    height: 95%;
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #ffffff;
+    box-shadow: #131d1d 10px 10px 0px;
+    border-radius: 10px;
+}
+
+.Moletons {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* use nowrap se não quiser quebra em telas pequenas */
+    height: 550px;
+    width:80%;
+    margin: 5px auto; /* centraliza horizontalmente */
+    text-align: center;
+}
+#Moletons_Section h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #96775E;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
 }
